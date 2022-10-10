@@ -1,0 +1,25 @@
+type Post {
+    idx: ID!
+    title: String!
+    contents: String!
+    category: String
+    author: Author!
+}
+
+type Author {
+    idx: ID!
+    name: String!
+    thumbnail: String
+}
+
+# The Root Query for the application
+type Query {
+    getAllPosts: [Post]
+    getPost(idx: ID!): Post
+}
+
+# The Root Mutation for the application
+type Mutation {
+    createPost(title: String!, contents: String!, category: String, authorIdx: ID!) : Post
+    updatePostTitle(idx: ID!, title: String!) : Post
+}
