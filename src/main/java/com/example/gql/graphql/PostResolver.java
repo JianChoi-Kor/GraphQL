@@ -13,7 +13,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class PostService implements GraphQLQueryResolver, GraphQLMutationResolver {
+public class PostResolver implements GraphQLQueryResolver, GraphQLMutationResolver {
 
     private final AuthorRepository authorRepository;
     private final PostRepository postRepository;
